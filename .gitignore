@@ -1,0 +1,9 @@
+.dbus-keyrings/
+.subversion/
+
+.gitconfig
+.lesshst
+.minttyrc
+_viminfo
+.bash_history
+.viminfo
