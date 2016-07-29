@@ -179,10 +179,10 @@ creplacer ()
     # Find matches
     #
     if [[ $DISPCMD = "true" ]]; then
-        echo "find $SEARCHPATH -name \"${FILEPAT}\" -exec sed -i \"s/$SEARCHREGEXP/$REPLACESTRING/g$IGNCASE\" {} \;"
+        echo "find $SEARCHPATH -name \"${FILEPAT}\" -exec sed -bi -e \"s/$SEARCHREGEXP/$REPLACESTRING/g$IGNCASE\" {} \;"
     fi
 
-    find $SEARCHPATH -name "${FILEPAT}" -exec sed -i -e "s/$SEARCHREGEXP/$REPLACESTRING/g$IGNCASE" {} \;
+    find $SEARCHPATH -name "${FILEPAT}" -exec sed -bi -e "s/$SEARCHREGEXP/$REPLACESTRING/g$IGNCASE" {} \;
 }
 
 
